@@ -1,0 +1,44 @@
+# OS specific temporary files
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.buildpath
+.idea
+.project
+.settings
+*.esproj
+*.komodoproject
+*.komodotools
+nbproject
+
+# Tools
+.svn
+.sass-cache
+
+# Vendor
+/vendor/*
+
+# Ignore contrib and core drupal
+/web/*
+
+# But keep custom modules, themes and the EP custom profile.
+# See http://git-scm.com/docs/gitignore.
+!/web/sites/
+/web/sites/*
+!/web/sites/all/
+/web/sites/all/*
+
+!/web/sites/all/modules/
+/web/sites/all/modules/*
+!/web/sites/all/modules/custom
+!/web/sites/all/modules/features
+
+!/web/sites/all/themes/
+/web/sites/all/themes/*
+!/web/sites/all/themes/custom
+
+!/web/profiles/
+/web/profiles/*
+!/web/profiles/custom_profile

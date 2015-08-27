@@ -1,0 +1,71 @@
+{
+  "name": "drupal-composer/drupal-project",
+  "description": "Composer template for Drupal projects",
+  "re-addositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.drupal-composer.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0",
+    "derhasi/composer-preserve-paths": "0.1.*",
+    "drupal/drupal-library-installer-plugin": "~0.1",
+    "drupal/drupal": "7.*",
+    "drupal/views": "7.*",
+    "drupal/bootstrap": "^7.3",
+    "drupal/entity": "7.*",
+    "drupal/entityreference": "7.*",
+    "drupal/features": "7.*",
+    "drupal/token": "7.*",
+    "drupal/ds": "7.*",
+    "drupal/field_group": "7.*",
+    "drupal/link": "7.*",
+    "drupal/strongarm": "7.*",
+    "drupal/wysiwyg": "7.*",
+    "drupal/jquery_update": "7.*",
+    "ckeditor/ckeditor": "4.*"
+  },
+  "provide": {
+    "composer/installers": "~1.0",
+    "derhasi/composer-preserve-paths": "0.1.*"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "./scripts/drupal-setup.sh"
+    ]
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "extra": {
+    "drupal-libraries": {
+      "library-directory": "web/sites/all/libraries",
+      "libraries": [
+        {
+          "name": "ckeditor",
+          "package": "ckeditor/ckeditor"
+        }
+      ]
+    },
+    "installer-paths": {
+      "web/": ["type:drupal-core"],
+      "web/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+      "web/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
+      "web/sites/all/libraries/{$name}/": ["type:drupal-library"],
+      "web/sites/all/drush/{$name}/": ["type:drupal-drush"]
+    },
+    "preserve-paths": [
+      "web/sites/all/modules/contrib",
+      "web/sites/all/modules/features",
+      "web/sites/all/modules/custom",
+      "web/sites/all/themes/contrib",
+      "web/sites/all/themes/custom",
+      "web/sites/all/libraries",
+      "web/sites/all/drush",
+      "web/sites/default/settings.php",
+      "web/sites/default/files",
+      "web/profiles/custom_profile"
+    ]
+  }
+}
