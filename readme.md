@@ -1,6 +1,6 @@
 # Drupal Composer project template
 ##Introduction
-This is an example project demonstrating how to manage core, contrib modules, custom modules, features, cusotm install profiles and custom themes with Composer. For more information see here: 
+This is an example project demonstrating how to manage core, contrib modules, custom modules, features, cusotm install profiles and custom themes with Composer. For more information see here: http://neilcameron.me/#!/blog/post/18
 
 ##Initial install
 All dependencies are managed via Composer. To get your drupal instance, you need to install via composer:
