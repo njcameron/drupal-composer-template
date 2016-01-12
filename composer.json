@@ -1,7 +1,7 @@
 {
   "name": "drupal-composer/drupal-project",
   "description": "Composer template for Drupal projects",
-  "re-addositories": [
+  "repositories": [
     {
       "type": "composer",
       "url": "https://packagist.drupal-composer.org"
